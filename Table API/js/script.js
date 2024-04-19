@@ -1,19 +1,30 @@
-const apiURL = "https://jsonplaceholder.typicode.com/users"
+
+const apiURL = "https://dummyjson.com/products"
 
 
-async function dummyApi() {
 
-    await fetch(apiURL)
-        .then((res) => {
-            return res.json()
-        })
-        .then((data) => {
-            console.log(data);
-        })
-        .catch((error) => {
-            console.log(error);
-        })
+fetch(apiURL)
+    .then(res => res.json())
+    .then(res => {
+        const data = res.products;
+        let rows = "";
+        data.forEach(products => {
+            rows += `<tr>
+            <td>${products.id}</td>
+            <td>${products.title}</td>
+            <td>${products.description}</td>
+            <td>${products.price}</td>
+            <td>${products.discountPercentage}</td>
+            <td>${products.rating}</td>
+            <td>${products.stock}</td>
+            <td>${products.brand}</td>
+            <td>${products.category}</td>
+            <td><img src="${products.thumbnail}" style="width:30%"></td>
+            </tr>`
+        });
 
-}
-
-dummyApi()
+        document.getElementById('tableRows').innerHTML = rows;
+    })
+    .catch((error) => {
+        console.log(error);
+    })
