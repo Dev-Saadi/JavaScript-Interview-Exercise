@@ -73,7 +73,7 @@ let apiData = fetch(apiURL)
 apiData.then(res => res.json())
     .then(data => {
         data.products.forEach(item => {
-            console.log(item.id, item.title);
+            console.log(item.id);
         });
     })
 
