@@ -36,21 +36,14 @@ const Data = () => {
         <>
 
 
-
             <div className="overflow-y-auto max-h-screen">
-
-
 
                 <h1 className='font-normal text-2xl py-1'>Data Parsed Sccuessfully</h1>
 
 
-
-
                 <Table className="min-w-full bg-black border-collapse">
+
                     <thead className="bg-cyan-900 text-white sticky top-0">
-
-
-
                         <tr>
                             {topbar.map((item, index) => (
                                 <th key={index} className="px-6 py-3">
@@ -58,9 +51,8 @@ const Data = () => {
                                 </th>
                             ))}
                         </tr>
-
-
                     </thead>
+
                     <tbody>
                         {data.flightOffer.map((flight, index) => (
                             <tr key={index} className="bg-blue-50 text-[#172554]">
@@ -69,8 +61,6 @@ const Data = () => {
                                 {/* FLIGHT */}
 
                                 <td className="border  px-6 py-4">
-
-
                                     {flight.itineraries[0].segments.map((segment, segmentIndex) => (
                                         <p key={segmentIndex}>
                                             {segment.carrierCode} {segment.aircraft} <br />
@@ -81,30 +71,18 @@ const Data = () => {
 
                                 {/* AIRCRAFT */}
 
-
                                 <td className="border  px-6 py-4">
-
-
                                     {flight.itineraries[0].segments.map((segment, segmentIndex) => (
                                         <p key={segmentIndex}>
                                             {segment.flightNumber}
                                         </p>
                                     ))}
-
-
-
-
-
                                 </td>
 
 
                                 {/* ClASS */}
 
-
                                 <td className="border  px-6 py-4">
-
-
-
                                     {flight.class[0].map((item, segmentIndex) => (
                                         <p key={segmentIndex}>
                                             {item}
@@ -115,10 +93,7 @@ const Data = () => {
 
                                 {/* FARE */}
 
-
                                 <td className="border  px-6 py-4">
-
-
                                     {flight.fareBasis[0].map((item, segmentIndex) => (
                                         <p key={segmentIndex}>
                                             {item}
@@ -129,10 +104,7 @@ const Data = () => {
 
                                 {/* ROUTE-iateCode */}
 
-
                                 <td className="border  px-6 py-4">
-
-
                                     {flight.itineraries[0].segments.map((segment, segmentIndex) => (
                                         <p key={segmentIndex}>
                                             {segment.departure.iataCode} - {segment.arrival.iataCode}
@@ -143,9 +115,7 @@ const Data = () => {
 
                                 {/* DEPARTURE */}
 
-
                                 <td className="border  px-6 py-4">
-
                                     {flight.itineraries[0].segments.map((segment, segmentIndex) => (
                                         <p key={segmentIndex}>
                                             {segment.departure.at}
@@ -157,8 +127,6 @@ const Data = () => {
                                 {/* ARRIVAL */}
 
                                 <td className="border  px-6 py-4">
-
-
                                     {flight.itineraries[0].segments.map((segment, segmentIndex) => (
                                         <p key={segmentIndex}>
                                             {segment.arrival.at}
@@ -174,9 +142,8 @@ const Data = () => {
                                 </td>
 
                                 {/* DURATION */}
+
                                 <td className="border  px-6 py-4">
-
-
                                     {flight.itineraries.map((item, segmentIndex) => (
                                         <p key={segmentIndex}>
                                             {item.duration}
@@ -186,6 +153,7 @@ const Data = () => {
 
 
                                 {/* PRICING */}
+
                                 <td className="border text-center  px-6 py-4">
                                     {flight.price}
                                     <br />
