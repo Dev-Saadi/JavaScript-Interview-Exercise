@@ -28,8 +28,8 @@
 
 // or do this
 
-// num.forEach(num => {
-//     sum += num
+// num.forEach(item => {
+//     sum += item
 // });
 
 // console.log("The sum is:", sum);
@@ -66,16 +66,16 @@
 
 
 
-let apiURL = "https://dummyjson.com/products"
+// let apiURL = "https://dummyjson.com/products"
 
-let apiData = fetch(apiURL)
+// let apiData = fetch(apiURL)
 
-apiData.then(res => res.json())
-    .then(data => {
-        data.products.forEach(item => {
-            console.log(item.id);
-        });
-    })
+// apiData.then(res => res.json())
+//     .then(data => {
+//         data.products.forEach(item => {
+//             console.log(item.id);
+//         });
+//     })
 
 
 
