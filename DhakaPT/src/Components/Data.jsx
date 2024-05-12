@@ -27,12 +27,12 @@ const Data = () => {
         <>
 
 
-            <div className="overflow-y-auto max-h-screen">
+            <div>
 
                 <h1 className='font-normal text-2xl py-1'>Data Parsed Sccuessfully</h1>
 
 
-                <Table className="min-w-full bg-black border-collapse">
+                <Table className="min-w-full">
 
                     <thead className="bg-cyan-900 text-white sticky top-0">
                         <tr>
