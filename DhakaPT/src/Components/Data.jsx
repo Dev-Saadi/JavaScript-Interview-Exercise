@@ -1,6 +1,6 @@
 import Table from 'react-bootstrap/Table';
 import data from "../data.json"
-import { useState } from 'react';
+
 
 
 const Data = () => {
