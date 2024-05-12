@@ -6,15 +6,6 @@ import data from "../data.json"
 const Data = () => {
 
 
-
-
-
-
-
-
-
-
-
     const topbar = [
         { name: "#" },
         { name: "FLIGHT" },
