@@ -15,7 +15,7 @@
 
 
 
-// Interview problmes cybercart   add the values in array
+// Interview problmes cybercart add the values in array
 
 
 
@@ -89,6 +89,91 @@
 //             console.log(item);
 //         });
 //     })
+
+
+
+// async function apiCall() {
+
+//     let url = "https://dummyjson.com/products"
+//     let res = await fetch(url)
+//     let data = await res.json()
+//     data.products.forEach(item => {
+//         console.log(item);
+//     });
+// }
+
+// apiCall()
+
+
+
+// const apiCall = async () => {
+//     let url = "https://dummyjson.com/products"
+//     let res = await fetch(url)
+//     let data = await res.json()
+//     data.products.forEach(element => {
+
+//         console.log(element);
+//     });
+
+// }
+
+// apiCall()
+
+
+// const apiCall = async () => {
+//     let url = "https://dummyjson.com/products";
+//     let res = await fetch(url);
+//     let data = await res.json();
+//     const firstProduct = data.products[0];
+//     for (let key in firstProduct) {
+//         console.log(`${key}: ${firstProduct[key]}`);
+//     }
+// };
+
+// apiCall();
+
+
+// finding Duplicates
+// const arr = [1, 3, 4, 5, 7, 8, 2, 3, 1]
+
+// const duplicate = arr.filter((item, element) => arr.indexOf(item) !== element)
+// console.log(duplicate);
+
+
+//Finding Min Max value
+
+// const arr = [23, 45, 67, 89, 21, 87];
+// const max = Math.max(...arr);
+// console.log(max);
+
+// or
+
+// const arr = [23, 45, 67, 89, 21, 87];
+// const max = arr.reduce((prev, curr) =>
+//     (prev > curr ? prev : curr));
+// console.log(max);
+
+
+
+
+// How To find second Largest value in array
+
+// const arr = [24, 56, 43, 67];
+
+// // Find the largest value
+// const largest = Math.max(...arr);
+
+// // Remove the largest value from the array
+// const arrWithoutLargest = arr.filter(num => num !== largest);
+
+// // Find the second largest value in the modified array
+// const secondLargest = Math.max(...arrWithoutLargest);
+
+// console.log(secondLargest); // Output: 56
+
+
+
+
 
 
 
