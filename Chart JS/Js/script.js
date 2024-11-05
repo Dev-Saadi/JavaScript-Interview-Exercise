@@ -1,71 +1,61 @@
 let employeeLabel = [],
-    employeeSalaryData = [],
-    employeeAgeData = []
+  employeeSalaryData = [],
+  employeeAgeData = [];
 
 async function chartAPI() {
+  await callingDummyAPI();
 
-    await callingDummyAPI()
+  const ctx = document.getElementById("myChart");
 
-    const ctx = document.getElementById('myChart');
-
-    new Chart(ctx, {
-        type: 'line',
-        data: {
-            labels: employeeLabel,
-            datasets: [{
-                label: "Employee Salary",
-                borderColor: "#588157",
-                backgroundColor: "#588157",
-                data: employeeSalaryData,
-                borderWidth: 1
-            },
-            {
-                label: "Employee Age",
-                borderColor: "#fdf0d5",
-                backgroundColor: "#fdf0d5",
-                data: employeeAgeData,
-                borderWidth: 1
-            }
-            ]
+  new Chart(ctx, {
+    type: "line",
+    data: {
+      labels: employeeLabel,
+      datasets: [
+        {
+          label: "Employee Salary",
+          borderColor: "#588157",
+          backgroundColor: "#588157",
+          data: employeeSalaryData,
+          borderWidth: 1,
         },
-        options: {
-            interaction: {
-                mode: 'index',
-                axis: 'y'
-
-            },
-            scales: {
-                y: {
-                    beginAtZero: true
-                }
-            }
-        }
-    });
-
+        {
+          label: "Employee Age",
+          borderColor: "#fdf0d5",
+          backgroundColor: "#fdf0d5",
+          data: employeeAgeData,
+          borderWidth: 1,
+        },
+      ],
+    },
+    options: {
+      interaction: {
+        mode: "index",
+        axis: "y",
+      },
+      scales: {
+        y: {
+          beginAtZero: true,
+        },
+      },
+    },
+  });
 }
 
-chartAPI()
-
+chartAPI();
 
 // Fetching Data from Dummy API
 
 async function callingDummyAPI() {
+  const apiURL = "https://dummy-json.mock.beeceptor.com/companies";
+  const response = await fetch(apiURL);
+  const chartData = await response.json();
 
-    const apiURL = "https://dummy.restapiexample.com/api/v1/employees"
-    const response = await fetch(apiURL)
-    const chartData = await response.json()
+  const name = chartData.data.map((item) => item.employeeCount);
+  const salary = chartData.data.map((item) => item.id);
+  const age = chartData.data.map((item) => item.name);
 
-
-    const name = chartData.data.map((item) => (item.employee_name))
-    const salary = chartData.data.map((item) => (item.employee_salary))
-    const age = chartData.data.map((item) => (item.employee_age))
-
-    employeeLabel = name
-    employeeSalaryData = salary
-    employeeAgeData = age
-
-
+  employeeLabel = name;
+  employeeSalaryData = salary;
+  employeeAgeData = age;
 }
-
-
-
