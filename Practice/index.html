@@ -13,11 +13,20 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="container">
-      <h1>Generate Joke</h1>
-      <p id="joke" class="joke"></p>
+    <h1 class="text-center">Storing API Data on a Table</h1>
 
-      <button id="get_joke_btn" class="btn">Get another joke</button>
+    <div class="container">
+      <table class="table table-bordered">
+        <thead class="table-secondary">
+          <tr>
+            <th scope="col">Title</th>
+            <th scope="col">Description</th>
+            <th scope="col">Price</th>
+            <th scope="col">Image</th>
+          </tr>
+        </thead>
+        <tbody id="table_body"></tbody>
+      </table>
     </div>
     <script src="js/script.js"></script>
   </body>

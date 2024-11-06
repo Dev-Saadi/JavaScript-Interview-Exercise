@@ -1,17 +1,24 @@
-const jokebtn = document.getElementById("get_joke_btn");
-const jokeLine = document.getElementById("joke");
+const tableinfo = document.getElementById("table_body");
+const API = "https://fakestoreapi.com/products";
 
-const jokeAPI = "https://icanhazdadjoke.com/";
-
-const getJoke = async () => {
-  const res = await fetch(jokeAPI, {
-    headers: {
-      accept: "appication/json",
-    },
+fetch(API)
+  .then((res) => res.json())
+  .then((data) => {
+    console.log(data);
+    let tableData = "";
+    data.map((item, index) => {
+      tableData += `<tr><td>${item.title}</td>
+      <td>${item.description}</td>
+      <td>${item.price}</td>
+      <td><img src="${item.image}"></td>
+      </tr>`;
+    });
+    tableinfo.innerHTML = tableData;
+  })
+  .catch((error) => {
+    console.log(error);
   });
-  const data = await res.json();
 
-  jokeLine.innerText = data.joke;
-};
-
-getJoke();
+// fetch('https://fakestoreapi.com/products/1')
+//             .then(res=>res.json())
+//             .then(json=>console.log(json))
