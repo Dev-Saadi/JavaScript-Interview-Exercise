@@ -12,12 +12,7 @@
 
 // console.log(message);
 
-
-
-
 // Interview problmes cybercart add the values in array
-
-
 
 // const num = [10, 20, 30, 40, 50];
 // let sum = 0;
@@ -33,10 +28,6 @@
 // });
 
 // console.log("The sum is:", sum);
-
-
-
-
 
 // const users = [
 //     { name: "kelvin", age: 25 },
@@ -57,27 +48,23 @@
 //     console.log(`${users.name} is ${users.age} years old`)
 // });
 
-
 // var test = () => {
 //     console.log("hello");
 // }
 
 // test()
 
+// let apiURL = "https://dummyjson.com/products";
 
+// let apiData = fetch(apiURL);
 
-// let apiURL = "https://dummyjson.com/products"
-
-// let apiData = fetch(apiURL)
-
-// apiData.then(res => res.json())
-//     .then(data => {
-//         data.products.forEach(item => {
-//             console.log(item.id);
-//         });
-//     })
-
-
+// apiData
+//   .then((res) => res.json())
+//   .then((data) => {
+//     data.products.forEach((item) => {
+//       console.log(item);
+//     });
+//   });
 
 // let apiURL = "https://jsonplaceholder.typicode.com/users"
 
@@ -90,8 +77,6 @@
 //         });
 //     })
 
-
-
 // async function apiCall() {
 
 //     let url = "https://dummyjson.com/products"
@@ -103,8 +88,6 @@
 // }
 
 // apiCall()
-
-
 
 // const apiCall = async () => {
 //     let url = "https://dummyjson.com/products"
@@ -119,7 +102,6 @@
 
 // apiCall()
 
-
 // const apiCall = async () => {
 //     let url = "https://dummyjson.com/products";
 //     let res = await fetch(url);
@@ -132,13 +114,11 @@
 
 // apiCall();
 
-
 // finding Duplicates
 // const arr = [1, 3, 4, 5, 7, 8, 2, 3, 1]
 
 // const duplicate = arr.filter((item, element) => arr.indexOf(item) !== element)
 // console.log(duplicate);
-
 
 //Finding Min Max value
 
@@ -152,9 +132,6 @@
 // const max = arr.reduce((prev, curr) =>
 //     (prev > curr ? prev : curr));
 // console.log(max);
-
-
-
 
 // How To find second Largest value in array
 
@@ -171,14 +148,25 @@
 
 // console.log(secondLargest); // Output: 56
 
+// const tableinfo = document.getElementById("table_body");
+// const tableinfo2 = document.getElementById("table_body2");
+// const tableinfo3 = document.getElementById("table_body3");
+// const API = "https://fakestoreapi.com/products";
 
-
-
-
-
-
-
-
-
-
-
+// fetch(API)
+//   .then((response) => {
+//     return response.json();
+//   })
+//   .then((data) => {
+//     let tableData = "";
+//     let tableData2 = "";
+//     let tableData3 = "";
+//     data.map((item, index) => {
+//       tableData += `<div> ${item.title}</div>`;
+//       tableData2 += `<div> ${item.description}</div>`;
+//       tableData3 += `<div> ${item.price}</div>`;
+//     });
+//     tableinfo.innerHTML = tableData;
+//     tableinfo2.innerHTML = tableData2;
+//     tableinfo3.innerHTML = tableData3;
+//   });

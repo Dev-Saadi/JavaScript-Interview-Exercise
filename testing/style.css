@@ -1,0 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.display {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+
+  height: 100vh;
+  gap: 20%;
+}
