@@ -1,14 +1,14 @@
 // function first() {
-//     return "first function"
+//   return "first function";
 // }
 // function second() {
-//     return "second function"
+//   return "second function";
 // }
 // function third() {
-//     return "third function"
+//   return "third function";
 // }
 
-// const message = first() && second() && third()
+// const message = first() && second() && third();
 
 // console.log(message);
 
@@ -30,18 +30,18 @@
 // console.log("The sum is:", sum);
 
 // const users = [
-//     { name: "kelvin", age: 25 },
-//     { name: "John", age: 34 },
-//     { name: "Bob", age: 56 }
-// ]
+//   { name: "kelvin", age: 25 },
+//   { name: "John", age: 34 },
+//   { name: "Bob", age: 56 },
+// ];
 
 // for (let i = 0; i < users.length; i++) {
-//     console.log(`${users[i].name} is ${users[i].age} years old`);
+//   let age = `${users[i].name} is ${users[i].age} years old`;
 
-//     // let people = users[i].name
-//     // let number = users[i].age
+//   let people = users[i].name;
+//   let number = users[i].age;
 
-//     // console.log(people, number);
+//   console.log(age);
 // }
 
 // users.forEach(users => {
