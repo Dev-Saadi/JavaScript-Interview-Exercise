@@ -23,11 +23,10 @@
 //             .then(res=>res.json())
 //             .then(json=>console.log(json))
 
-let arr = [10, 20, 30, 40, 50];
+// let arr = [10, 20, 30, 40, 50];
 
-let sum = 0;
+// let sum = 0;
 
-for (i = 0; i < arr.length; i++) {
-  sum += arr[i];
-}
-console.log(sum);
+// for (i = 0; i < arr.length; i++) {
+//   sum += arr[i];
+// }
