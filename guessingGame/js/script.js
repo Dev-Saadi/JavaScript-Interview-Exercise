@@ -15,7 +15,7 @@ const check = () => {
     document.getElementById("result").innerHTML = "Correct!!";
     disableInputButton();
   } else {
-    const hint = guess > secretNumber ? "lower" : "higher";
+    const hint = guess > secretNumber ? "higher" : "lower";
     document.getElementById("result").innerHTML = "Your guess is" + " " + hint;
     document.getElementById("chance").innerHTML = chance;
   }
