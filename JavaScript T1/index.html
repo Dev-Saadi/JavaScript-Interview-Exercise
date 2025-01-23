@@ -8,8 +8,18 @@
     <title>Document</title>
   </head>
   <body>
-    <div>
-      <h1>Hello</h1>
+    <div class="container">
+      <h1>Calculator</h1>
+      <input type="number" id="firstNumber" placeholder="First Number" />
+      <select id="operators">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+      </select>
+      <input type="number" id="secondNumber" placeholder="Second Number" />
+      <button id="calculate">Calculate</button>
+      <p id="result">Displayed Result</p>
     </div>
 
     <script src="js/script.js"></script>

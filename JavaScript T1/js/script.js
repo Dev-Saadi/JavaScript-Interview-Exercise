@@ -1,5 +1,10 @@
-console.log("hello");
+const firstNumberInput = document.getElementById("firstNumber");
+const secondNumberInput = document.getElementById("secondNumber");
+const operatorsInput = document.getElementById("operators");
+let resultInput = document.getElementById("result");
 
-let msg = "kallu";
+const firstNumber = firstNumberInput.value;
+const secondNumber = secondNumberInput.value;
+const operators = operatorsInput.value;
 
-console.log(msg);
+console.log(firstNumber);
