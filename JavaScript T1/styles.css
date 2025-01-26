@@ -64,5 +64,23 @@ button:hover {
   border: 1px solid #ccc;
   padding: 10px;
   border-radius: 4px;
-  background-color: #aeffb2;
+  background-color: #c5ccc6;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#resetbtn {
+  padding: 10px;
+  background-color: rgb(234, 140, 73);
+  border-radius: 20px;
+  font-weight: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: black;
+  transition-duration: 1s;
+  cursor: pointer;
+}
+
+#resetbtn:hover {
+  background-color: #c5ccc6;
+  color: brown;
+  transition: 0.5s;
 }
