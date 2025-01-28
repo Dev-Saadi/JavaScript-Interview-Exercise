@@ -10,6 +10,11 @@ function calculate() {
   const secondNumber = parseFloat(secondNumberInput.value);
   const operators = operatorsInput.value;
 
+  if (isNaN(firstNumber) || isNaN(secondNumber)) {
+    resultDisplay.textContent = "Enter valid numbers";
+    return; // Stop further execution if inputs are invalid
+  }
+
   if (operators === "+") {
     result = firstNumber + secondNumber;
   } else if (operators === "-") {
