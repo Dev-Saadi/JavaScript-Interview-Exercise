@@ -12,7 +12,7 @@ function calculate() {
 
   if (isNaN(firstNumber) || isNaN(secondNumber)) {
     resultDisplay.textContent = "Enter valid numbers";
-    return; // Stop further execution if inputs are invalid
+    return;
   }
 
   if (operators === "+") {
@@ -22,6 +22,10 @@ function calculate() {
   } else if (operators === "*") {
     result = firstNumber * secondNumber;
   } else if (operators === "/") {
+    if (secondNumber === 0) {
+      resultDisplay.textContent = "Divison by 0 not allowed";
+      return;
+    }
     result = firstNumber / secondNumber;
   }
 
