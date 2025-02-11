@@ -9,8 +9,20 @@
 // console.log(sum);
 
 // Print number from 1 to 5 using a loop
-sum = 10;
+sum = 5;
 
-for (i = 5; i <= sum; i++) {
-  console.log(i);
-}
+// for (i = 5; i <= sum; i++) {
+//   console.log(i);
+// }
+
+// do {
+//   console.log(sum);
+
+//   sum++;
+// } while (sum <= 10);
+
+// function addPlus(a, b) {
+//   console.log(a + b);
+// }
+
+// addPlus(10, 1);

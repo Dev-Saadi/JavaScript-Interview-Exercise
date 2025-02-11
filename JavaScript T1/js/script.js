@@ -15,18 +15,26 @@ function calculate() {
     return;
   }
 
-  if (operators === "+") {
-    result = firstNumber + secondNumber;
-  } else if (operators === "-") {
-    result = firstNumber - secondNumber;
-  } else if (operators === "*") {
-    result = firstNumber * secondNumber;
-  } else if (operators === "/") {
-    if (secondNumber === 0) {
-      resultDisplay.textContent = "Divison by 0 not allowed";
-      return;
-    }
-    result = firstNumber / secondNumber;
+  switch (operators) {
+    case "+":
+      result = firstNumber + secondNumber;
+      break;
+    case "-":
+      result = firstNumber - secondNumber;
+      break;
+    case "*":
+      result = firstNumber * secondNumber;
+      break;
+
+    case "/":
+      if (secondNumber === 0) {
+        resultDisplay.textContent = "Divison by 0 not allowed";
+        return;
+      }
+      result = firstNumber / secondNumber;
+      break;
+
+    default:
   }
 
   resultDisplay.textContent = "Result: " + result;
@@ -38,7 +46,7 @@ function refresh() {
   secondNumberInput.value = "";
   operatorsInput.value = "+";
 
-  resultDisplay.textContent = "Result: ";
+  resultDisplay.textContent = "Displayed Result";
 }
 
 reset.addEventListener("click", refresh);
