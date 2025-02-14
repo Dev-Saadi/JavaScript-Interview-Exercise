@@ -26,3 +26,30 @@ sum = 5;
 // }
 
 // addPlus(10, 1);
+
+// for (let i = 0; i <= 20; i++) {
+//   if (i % 2 !== 0) {
+//     continue;
+//   }
+//   console.log(i);
+// }
+
+// // Factorial calculation using a for loop
+// function factorial(n) {
+//   let result = 1;
+//   for (let i = 1; i <= n; i++) {
+//     result *= i;                        // Multiply result by each number from 1 to n
+//   }
+//   return result;
+// }
+
+// // Example usage
+// let n = 7;
+// console.log(factorial(n));
+
+// function rectangleArea(w, h) {
+//   return w * h;
+// }
+
+// let value = rectangleArea(5, 6);
+// console.log(value);
