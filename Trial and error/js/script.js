@@ -1,4 +1,4 @@
-// const arr = [2, 3, 4, 5, 5];
+// const arr = [2, 3, 4, 5, 6];
 
 // let sum = 0;
 
@@ -8,8 +8,13 @@
 
 // console.log(sum);
 
+// arr.forEach((item) => {
+//   sum += item;
+// });
+// console.log(sum);
+
 // Print number from 1 to 5 using a loop
-sum = 5;
+// sum = 5;
 
 // for (i = 5; i <= sum; i++) {
 //   console.log(i);
@@ -53,3 +58,11 @@ sum = 5;
 
 // let value = rectangleArea(5, 6);
 // console.log(value);
+
+let cities = ["Dhaka", "Ankara", "NewYork", "Tehran", "Canberra"];
+
+cities.push("Islamabad");
+cities.shift();
+for (let i = 0; i < cities.length; i++) {
+  console.log(cities[i]);
+}
