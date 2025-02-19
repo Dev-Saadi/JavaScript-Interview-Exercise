@@ -61,8 +61,12 @@
 
 let cities = ["Dhaka", "Ankara", "NewYork", "Tehran", "Canberra"];
 
-cities.push("Islamabad");
-cities.shift();
+// console.log(cities[1]);
+
+// cities.push("Islamabad");
+// cities.shift();
+// cities.unshift("Berlin");
+// cities.splice(2, 0, "Paris");
 for (let i = 0; i < cities.length; i++) {
   console.log(cities[i]);
 }
