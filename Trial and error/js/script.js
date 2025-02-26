@@ -59,14 +59,35 @@
 // let value = rectangleArea(5, 6);
 // console.log(value);
 
-let cities = ["Dhaka", "Ankara", "NewYork", "Tehran", "Canberra"];
+// let cities = ["Dhaka", "Ankara", "NewYork", "Tehran", "Canberra"];
 
+// let = unit = "";
 // console.log(cities[1]);
 
 // cities.push("Islamabad");
 // cities.shift();
 // cities.unshift("Berlin");
 // cities.splice(2, 0, "Paris");
-for (let i = 0; i < cities.length; i++) {
-  console.log(cities[i]);
-}
+// for (let i = 0; i < cities.length; i++) {
+//   unit += cities[i];
+// }
+
+// console.log(unit);
+
+let myAccount = {
+  balance: 1000,
+  deposit: function (amount) {
+    this.balance += amount;
+    console.log(`Deposited ${amount}. New Balance: ${this.balance}`);
+  },
+  withdraw: function (amount) {
+    if (amount <= this.balance) {
+      this.balance -= amount;
+      console.log(`Withdrew ${amount}. New Balance: ${this.balance}`);
+    } else {
+      console.log("Your are broke");
+    }
+  },
+};
+
+myAccount.withdraw(2000);
