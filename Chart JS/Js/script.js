@@ -51,9 +51,9 @@ async function callingDummyAPI() {
   const response = await fetch(apiURL);
   const chartData = await response.json();
 
-  const name = chartData.data.map((item) => item.employeeCount);
-  const salary = chartData.data.map((item) => item.id);
-  const age = chartData.data.map((item) => item.name);
+  const name = chartData.map((item) => item.name);
+  const salary = chartData.map((item) => item.id);
+  const age = chartData.map((item) => item.zip);
 
   employeeLabel = name;
   employeeSalaryData = salary;

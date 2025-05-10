@@ -90,4 +90,5 @@ let myAccount = {
   },
 };
 
-myAccount.withdraw(2000);
+myAccount.deposit(3000);
+myAccount.withdraw(3000);
